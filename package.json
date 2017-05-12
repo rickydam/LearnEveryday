@@ -1,0 +1,9 @@
+{
+  "name": "storestuff",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "4.15.2",
+    "mysql": "2.13.0",
+    "morgan": "1.8.1"
+  }
+}

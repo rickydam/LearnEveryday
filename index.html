@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <script src="controllers/insertController.js"></script>
+  </head>
+
+  <body ng-app="myApp">
+    <font face="Source Sans Pro">
+
+      <div ng-controller="insertController">
+        <h2> What I learned today </h2>
+        <form>
+          Date <br>
+          <input type="text" ng-model="date"><br><br>
+          Content <br>
+          <textarea rows="10" cols="30" ng-model="content"></textarea><br><br>
+          <input type="button" value="Submit" ng-click="insertdata()">
+        </form>
+      </div>
+
+    </font>
+  </body>
+</html>
