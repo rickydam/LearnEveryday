@@ -9,8 +9,9 @@
 5. Create a database named ```storestuff```
 6. Create a table named ```thestuff```
 7. Create a column named ```date``` with type ```VARCHAR``` and size ```1000```
-9. Create a column named ```content``` with type ```VARCHAR``` and size ```1000```
-9. Run ```node app.js```
-10. Visit ```localhost:3000```
+8. Create a column named ```content``` with type ```VARCHAR``` and size ```1000```
+9. Run ```npm install``` to get the dependencies needed to run the project
+10. Run ```node app.js```
+11. Visit ```localhost:3000```
 
 **NOTE**: You can also visit ```localhost:3000/load``` to check the output of SQL query ```SELECT * FROM storestuff```
