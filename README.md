@@ -3,7 +3,7 @@
 # Installation
 
 1. **```git clone https://github.com/rickydam/LearnEveryday```**
-2. Move PHP files to WAMP www folder **```c://wamp64/www/storestuff```**
+2. Move PHP files to WAMP www folder **```C://wamp64/www/storestuff```**
 3. Run WAMP local server
 4. Open phpMyAdmin
 5. Create a database named **```storestuff```**
