@@ -1,5 +1,6 @@
 var app = angular.module('myApp', []);
-app.controller('insertController', function($scope, $http) {
+
+app.controller('insertController', function($scope, $http, resultsService) {
   $scope.insertdata = function() {
     $http({
       method: 'POST',
@@ -9,6 +10,7 @@ app.controller('insertController', function($scope, $http) {
     })
     .then(function(res) {
       console.log("Successful response", res)
+      resultsService.addItem($scope.date, $scope.content);
       $scope.date = "";
       $scope.content = "";
     })

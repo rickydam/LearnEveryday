@@ -1,0 +1,14 @@
+.left {
+  width: 39%;
+  background-color: silver;
+  height: auto;
+  float: left;
+  position: fixed;
+}
+
+.right {
+  width: 60%;
+  background-color: lightgray;
+  height: auto;
+  float: right;
+}
