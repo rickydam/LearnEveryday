@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/rickydam/LearnEveryday/master/images/screenshot.png" width="30%">
+<img src="https://github.com/rickydam/LearnEveryday/blob/master/assets/images/screenshot.png" width="100%">
 
 # Installation
 
