@@ -6,9 +6,10 @@ app.controller('fetchController', function ($scope, $http, resultsService) {
     .then(function successCallback(response) {
       size = (response.data).length;
       while(count < size) {
+        var id = response.data[count].id;
         var date = response.data[count].date;
         var content = response.data[count].content;
-        resultsService.addItem(date, content);
+        resultsService.addItem(id, date, content);
         count++;
       }
       size = 0;

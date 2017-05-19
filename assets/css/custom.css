@@ -11,4 +11,39 @@
   background-color: lightgray;
   height: auto;
   float: right;
+
+}
+
+.card {
+  width: 60%;
+  background-color: white;
+  position: relative;
+  display: inline-block;
+  min-height: 70px;
+  text-align: left!important;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: #DB2929;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.deleteButton:hover {
+  opacity: 0.5;
+}
+
+.bold-underline {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.theText {
+  margin-left: 10px;
+  margin-top: 5px;
 }

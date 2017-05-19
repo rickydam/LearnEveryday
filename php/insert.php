@@ -11,7 +11,8 @@
   $date = mysqli_real_escape_string($theConnection, $theData->date);
   $content = mysqli_real_escape_string($theConnection, $theData->content);
 
-  mysqli_query($theConnection, "INSERT INTO thestuff(date, content) VALUES('$date', '$content')");
+  $query = "INSERT INTO thestuff(date, content) VALUES('$date', '$content')";
+  mysqli_query($theConnection, $query);
 
   mysqli_close($theConnection);
 

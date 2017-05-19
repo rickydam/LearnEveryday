@@ -1,19 +1,20 @@
 <?php
   header('Access-Control-Allow-Origin: *'); // clientside(Node) <-> serverside(PHP)
 
-  $mysqli = new mysqli("localhost", "root", "", "storestuff");
+  $theConnection = new mysqli("localhost", "root", "", "storestuff");
 
-  if($mysqli->connect_error) {
-    printf("Connect failed: %s\n", $mysqli->connect_error);
+  if($theConnection->connect_error) {
+    printf("Connection failed: %s\n", $theConnection->connect_error);
     exit();
   }
 
   $query = "SELECT * FROM thestuff";
   $theData = array();
 
-  if($result = $mysqli->query($query)) {
+  if($result = $theConnection->query($query)) {
     while($row = mysqli_fetch_array($result)) {
       $theData[] = array(
+        'id'=>$row['id'],
         'date'=>$row['date'],
         'content'=>$row['content']);
     }
@@ -23,5 +24,5 @@
   else {
     echo "0 results.";
   }
-  $mysqli->close(); // Close the connection
+  $theConnection->close(); // Close the connection
 ?>

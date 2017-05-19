@@ -6,6 +6,7 @@
     <script src="controllers/insertController.js"></script>
     <script src="controllers/fetchController.js"></script>
     <script src="services/result.js"></script>
+    <script src="controllers/deleteController.js"></script>
     </script>
   </head>
 
@@ -29,15 +30,22 @@
 
       <div class="right">
         <center>
-          <div ng-controller="fetchController">
+          <div ng-controller="fetchController"><br>
             <span ng-repeat="item in results">
-              {{item.date}}<br>
-              {{item.content}}<br><br>
+              <div class="card">
+                <div class="theText">
+                  <span class="bold-underline">{{item.date}}</span><br>
+                  {{item.content}}
+                </div>
+                <div ng-controller="deleteController">
+                  <input type="button" class="deleteButton" ng-click="deleteThisItem(item)" value="x">
+                </div>
+              </div>
+              <br><br>
             </span>
           </div>
         </center>
       </div>
-
     </font>
   </body>
 </html>

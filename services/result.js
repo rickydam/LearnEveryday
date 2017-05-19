@@ -1,10 +1,11 @@
 app.service('resultsService', function() {
   var results = new Array();
 
-  var addItem = function(date, content) {
+  var addItem = function(id, date, content) {
     var obj = new Object();
-    obj["date"] = date;
-    obj["content"] = content;
+    obj['id'] = id;
+    obj['date'] = date;
+    obj['content'] = content;
     results.push(obj);
   }
 
@@ -12,9 +13,18 @@ app.service('resultsService', function() {
     return results;
   }
 
+  var deleteItem = function(id) {
+    for(var i=0; i<results.length; i++) {
+      if(results[i].id === id) {
+        results.splice(i, 1);
+      }
+    }
+  }
+
   return {
     addItem: addItem,
-    getItems: getItems
+    getItems: getItems,
+    deleteItem: deleteItem
   };
 
 });
