@@ -9,8 +9,8 @@ app.controller('insertController', function($scope, $http, resultsService) {
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
     })
     .then(function(res) {
-      console.log("Successful response", res)
-      resultsService.addItem($scope.date, $scope.content);
+      console.log("Successful response", res);
+      resultsService.addItem(res.id, $scope.date, $scope.content);
       $scope.date = "";
       $scope.content = "";
     })
