@@ -11,8 +11,9 @@
 7. Create an id column using this SQL query `ALTER TABLE thestuff ADD COLUMN id INT AUTO_INCREMENT UNIQUE FIRST;`
 8. Create a column named `date` with type `VARCHAR` and size `1000`
 9. Create a column named `content` with type `VARCHAR` and size `1000`
-10. `npm install` to get the dependencies needed to run the project
-11. `node app.js`
-12. Visit `localhost:3000`
+10. Navigate to the project directory `cd LearnEveryday`
+11. `npm install` to get the dependencies needed to run the project
+12. `node app.js`
+13. Visit `localhost:3000`
 
 **NOTE**: You can also visit `localhost:3000/load` to check the output of SQL query `SELECT * FROM storestuff`
