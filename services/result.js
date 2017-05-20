@@ -7,6 +7,9 @@ app.service('resultsService', function() {
     obj['date'] = date;
     obj['content'] = content;
     results.unshift(obj);
+    results.sort(function(a, b) {
+      return parseFloat(b.id) - parseFloat(a.id);
+    });
   }
 
   var getItems = function() {
