@@ -10,7 +10,7 @@ app.controller('insertController', function($scope, $http, resultsService) {
     })
     .then(function(res) {
       console.log("Successful response", res);
-      resultsService.addItem(res.id, $scope.date, $scope.content);
+      resultsService.addItem(res.data, $scope.date, $scope.content);
       $scope.date = "";
       $scope.content = "";
     })

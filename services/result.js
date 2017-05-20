@@ -6,7 +6,7 @@ app.service('resultsService', function() {
     obj['id'] = id;
     obj['date'] = date;
     obj['content'] = content;
-    results.push(obj);
+    results.unshift(obj);
   }
 
   var getItems = function() {

@@ -14,6 +14,13 @@
   $query = "INSERT INTO thestuff(date, content) VALUES('$date', '$content')";
   mysqli_query($theConnection, $query);
 
+  $query2 = "SELECT * FROM thestuff WHERE id=(SELECT MAX(id) FROM thestuff)";
+  $theQuery2 = mysqli_query($theConnection, $query2);
+  if($theQuery2) {
+    $theData = mysqli_fetch_row($theQuery2);
+    echo $theData[0];
+  }
+
   mysqli_close($theConnection);
 
 ?>
