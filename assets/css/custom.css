@@ -32,6 +32,11 @@
   color: white;
   border: none;
   outline: none;
+  font-size: 15px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2.5px;
+  padding-bottom: 2px;
 }
 
 .deleteButton:hover {
@@ -46,4 +51,41 @@
 .theText {
   margin-left: 10px;
   margin-top: 5px;
+}
+
+.editButton {
+  position: absolute;
+  top: 0;
+  right: 26;
+  cursor: pointer;
+  background-color: #1C86EE;
+  color: white;
+  border: none;
+  outline: none;
+  padding-bottom: 3px;
+}
+
+.editButton:hover {
+  opacity: 0.5;
+}
+
+.someCSS {
+  background-color: white;
+  z-index: 200;
+  opacity: 1;
+}
+
+.noCSS {
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.6;
+  z-index: 100;
+  pointer-events: none;
 }

@@ -7,6 +7,8 @@
     <script src="controllers/fetchController.js"></script>
     <script src="services/result.js"></script>
     <script src="controllers/deleteController.js"></script>
+    <script src="controllers/editController.js"></script>
+    <script src="controllers/fadeController.js"></script>
     </script>
   </head>
 
@@ -32,20 +34,27 @@
         <center>
           <div ng-controller="fetchController"><br>
             <span ng-repeat="item in results">
-              <div class="card">
-                <div class="theText">
-                  <span class="bold-underline">{{item.date}}</span><br>
-                  {{item.content}}
-                </div>
-                <div ng-controller="deleteController">
-                  <input type="button" class="deleteButton" ng-click="deleteThisItem(item)" value="x">
-                </div>
-              </div>
-              <br><br>
-            </span>
-          </div>
+                <div ng-controller="fadeController">
+                  <div class="card" ng-class="cardFade">
+                    <div class="theText">
+                      <span class="bold-underline">{{item.date}}</span><br>
+                      {{item.content}}
+                    </div><!-- theText -->
+                    <div ng-controller="deleteController">
+                      <input type="button" class="deleteButton" ng-click="deleteThisItem(item)" value="x">
+                    </div><!-- deleteController -->
+                    <div ng-controller="editController">
+                      <input type="button" class="editButton" ng-click="editThisItem(item)" value="✎">
+                    </div><!-- editController -->
+                  </div><!-- card -->
+                </div><!-- fadeController -->
+              <br>
+            </span><!-- ng-repeat -->
+            <div class="overlay"></div>
+          </div><!-- fetchController -->
         </center>
-      </div>
+      </div><!-- right -->
+
     </font>
   </body>
 </html>
