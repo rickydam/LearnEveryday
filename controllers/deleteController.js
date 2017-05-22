@@ -1,4 +1,4 @@
-app.controller("deleteController", function($scope, $http, resultsService) {
+app.controller("deleteController", function($scope, $rootScope, $http, resultsService) {
   $scope.deleteThisItem = function(item) {
     $http({
       method: 'POST',
@@ -9,6 +9,8 @@ app.controller("deleteController", function($scope, $http, resultsService) {
     .then(function(res) {
       console.log("Deleted the item successfully!");
       resultsService.deleteItem(item.id);
+      $scope.cardFade = "no-overlay";
+      $rootScope.fillerSpace = "no-overlay";
     });
   }
 });

@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <script src="controllers/insertController.js"></script>
     <script src="controllers/fetchController.js"></script>
-    <script src="services/result.js"></script>
+    <script src="services/resultsService.js"></script>
     <script src="controllers/deleteController.js"></script>
-    <script src="controllers/editController.js"></script>
     <script src="controllers/fadeController.js"></script>
+    <script src="controllers/editController.js"></script>
     </script>
   </head>
 
@@ -23,12 +23,13 @@
               Date <br>
               <input type="text" ng-model="date"><br><br>
               Content <br>
-              <textarea rows="10" cols="50" ng-model="content"></textarea><br><br>
+              <textarea rows="10" cols="50" ng-model="content"></textarea>
+              <br><br>
               <input type="button" value="Submit" ng-click="insertdata()">
             </form>
-          </div>
+          </div><!-- insertController -->
         </center>
-      </div>
+      </div><!-- left -->
 
       <div class="right">
         <center>
@@ -44,13 +45,13 @@
                       <input type="button" class="deleteButton" ng-click="deleteThisItem(item)" value="x">
                     </div><!-- deleteController -->
                     <div ng-controller="editController">
-                      <input type="button" class="editButton" ng-click="editThisItem(item)" value="✎">
+                      <input type="button" class="editButton" ng-click="editThisItem(item)" value="✎"><br>
                     </div><!-- editController -->
                   </div><!-- card -->
                 </div><!-- fadeController -->
               <br>
             </span><!-- ng-repeat -->
-            <div class="overlay"></div>
+            <div ng-class="fillerSpace"></div>
           </div><!-- fetchController -->
         </center>
       </div><!-- right -->

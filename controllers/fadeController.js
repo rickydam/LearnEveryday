@@ -1,11 +1,15 @@
-app.controller("fadeController", function($scope, $http, resultsService) {
-  $scope.cardFade = "noCSS";
+app.controller('fadeController', function($scope, $rootScope) {
+  $scope.cardFade = "no-overlay";
+  $rootScope.fillerSpace = "no-overlay";
+
   $scope.editThisItem = function(item) {
-    if($scope.cardFade === "noCSS") {
-      $scope.cardFade = "someCSS";
+    if($scope.cardFade === "no-overlay") {
+      $scope.cardFade = "infocus";
+      $rootScope.fillerSpace = "overlay";
     }
-    else if($scope.cardFade === "someCSS") {
-      $scope.cardFade = "noCSS";
+    else if($scope.cardFade === "infocus") {
+      $scope.cardFade = "no-overlay";
+      $rootScope.fillerSpace = "no-overlay";
     }
     else {
       alert("FATAL ERROR!");
