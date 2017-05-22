@@ -93,3 +93,15 @@ textarea {
   max-width: 95%;
   max-height: 500px;
 }
+
+.theButton {
+  cursor: pointer;
+  background-color: #37BC61;
+  border: 1px solid black;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.theButton:hover {
+  opacity: 0.5;
+}
