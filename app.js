@@ -13,7 +13,7 @@ var connection = mysql.createConnection({
   host : 'localhost',
   user : 'root',
   password : '',
-  database : 'storestuff'
+  database : 'the_database'
 });
 
 connection.connect(function(error) {
@@ -22,8 +22,8 @@ connection.connect(function(error) {
 });
 
 app.get('/load', function(req, res) {
-  connection.query("SELECT * from thestuff", function(err, rows) {
-    if(err) console.log("SELECT from thestuff... did not work: " + err);
+  connection.query("SELECT * from the_table", function(err, rows) {
+    if(err) console.log("SELECT from the_table... did not work: " + err);
     else {
       res.end(JSON.stringify(rows, null, 2));
     }

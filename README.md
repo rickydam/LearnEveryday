@@ -1,19 +1,22 @@
-<img src="https://github.com/rickydam/LearnEveryday/blob/master/assets/images/thescreenshot.png" width="100%">
+<img src="https://github.com/rickydam/LearnEveryday/blob/master/assets/images/screenshot1.png" width="100%">
+<img src="https://github.com/rickydam/LearnEveryday/blob/master/assets/images/screenshot2.png" width="100%">
 
-# Installation
+# Windows Installation
 
 1. `git clone https://github.com/rickydam/LearnEveryday`
-2. Move PHP files to WAMP www folder `C://wamp64/www/storestuff`
+2. Move PHP files to WAMP www folder `C://wamp64/www/LearnEveryday`
 3. Run WAMP local server
 4. Open phpMyAdmin
-5. Create a database named `storestuff`
-6. Create a table named `thestuff`
-7. Create an id column using this SQL query `ALTER TABLE thestuff ADD COLUMN id INT AUTO_INCREMENT UNIQUE FIRST;`
-8. Create a column named `date` with type `VARCHAR` and size `1000`
-9. Create a column named `content` with type `VARCHAR` and size `1000`
-10. Navigate to the project directory `cd LearnEveryday`
-11. `npm install` to get the dependencies needed to run the project
-12. `node app.js`
-13. Visit `localhost:3000`
+5. Create a database named `the_database`
+6. Run query
+`CREATE TABLE test_table (
+  id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  theDate VARCHAR(1000) NOT NULL,
+  theContent VARCHAR(1000) NOT NULL
+)`
+7. Navigate to the project directory `cd LearnEveryday`
+8. `npm install` to get the dependencies needed to run the project
+9. `node app.js` to run the project
+10. Visit `localhost:3000`
 
-**NOTE**: You can also visit `localhost:3000/load` to check the output of SQL query `SELECT * FROM storestuff`
+**NOTE**: You can also visit `localhost:3000/load` to check the output of SQL query `SELECT * FROM the_table`

@@ -2,7 +2,7 @@ app.controller("deleteController", function($scope, $rootScope, $http, resultsSe
   $scope.deleteThisItem = function(item) {
     $http({
       method: 'POST',
-      url: 'http://localhost/storestuff/delete.php',
+      url: 'http://localhost/LearnEveryday/delete.php',
       data: {'id': item.id},
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
     })
@@ -11,6 +11,14 @@ app.controller("deleteController", function($scope, $rootScope, $http, resultsSe
       resultsService.deleteItem(item.id);
       $scope.cardFade = "no-overlay";
       $rootScope.fillerSpace = "no-overlay";
+      resultsService.editTrigger(item.id);
+      console.log("Edit mode has been disabled.");
+      document.getElementById("theHeader").innerHTML = "What I learned today";
+      document.getElementById("dateInput").value = "";
+      document.getElementById("contentInput").value = "";
+      document.getElementById("POSTbutton").value = "Submit";
+      document.getElementById("POSTbutton").style.backgroundColor = "#329555";
+      document.getElementById("theBody").style.backgroundColor = "white";
     });
   }
 });

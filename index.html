@@ -3,29 +3,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
     <link rel="stylesheet" href="assets/css/custom.css">
-    <script src="controllers/insertController.js"></script>
+    <script src="controllers/formController.js"></script>
     <script src="controllers/fetchController.js"></script>
     <script src="services/resultsService.js"></script>
     <script src="controllers/deleteController.js"></script>
-    <script src="controllers/fadeController.js"></script>
     <script src="controllers/editController.js"></script>
     </script>
   </head>
 
-  <body ng-app="myApp">
+  <body ng-app="myApp" id="theBody">
     <font face="Source Sans Pro">
 
       <div class="left">
         <center>
-          <div ng-controller="insertController">
-            <h2> What I learned today </h2>
+          <div ng-controller="formController">
+            <h2 id="theHeader"> What I learned today </h2>
             <form>
               Date <br>
               <input type="text" ng-model="date" id="dateInput"><br><br>
               Content <br>
               <textarea rows="10" cols="50" ng-model="content" id="contentInput"></textarea>
               <br><br>
-              <input class="theButton" type="button" value="Submit" ng-click="insertdata()">
+              <input id="POSTbutton" class="theButton" type="button" value="Submit" ng-click="doThePOST()">
             </form>
           </div><!-- insertController -->
         </center>
@@ -35,7 +34,7 @@
         <center>
           <div ng-controller="fetchController"><br>
             <span ng-repeat="item in results">
-                <div ng-controller="fadeController">
+                <div ng-controller="editController">
                   <div class="card" ng-class="cardFade">
                     <div class="theText">
                       <span class="bold-underline">{{item.date}}</span><br>
@@ -44,9 +43,7 @@
                     <div ng-controller="deleteController">
                       <input type="button" class="deleteButton" ng-click="deleteThisItem(item)" value="x">
                     </div><!-- deleteController -->
-                    <div ng-controller="editController">
-                      <input type="button" class="editButton" ng-click="editThisItem(item)" value="✎"><br>
-                    </div><!-- editController -->
+                    <input type="button" class="editButton" ng-click="editThisItem(item)" value="✎"><br>
                   </div><!-- card -->
                 </div><!-- fadeController -->
               <br>

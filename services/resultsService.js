@@ -1,5 +1,7 @@
 app.service('resultsService', function() {
   var results = new Array();
+  var editing = 0;
+  var idToEdit = -1;
 
   var addItem = function(id, date, content) {
     var obj = new Object();
@@ -24,10 +26,45 @@ app.service('resultsService', function() {
     }
   }
 
+  var isEditing = function() {
+    return editing;
+  }
+
+  var editTrigger = function(id) {
+    if(editing) {
+      editing = false;
+      idToEdit = -1;
+    }
+    else {
+      editing = true;
+      idToEdit = id;
+    }
+  }
+
+  var get_idToEdit = function() {
+    return idToEdit;
+  }
+
+  var editItem = function(date, content) {
+    for(var i=0; i<results.length; i++) {
+      if(results[i].id === idToEdit) {
+        var obj = new Object();
+        obj['id'] = idToEdit;
+        obj['date'] = date;
+        obj['content'] = content;
+        results[i] = obj;
+      }
+    }
+  }
+
   return {
     addItem: addItem,
     getItems: getItems,
-    deleteItem: deleteItem
+    deleteItem: deleteItem,
+    isEditing: isEditing,
+    editTrigger: editTrigger,
+    get_idToEdit: get_idToEdit,
+    editItem: editItem
   };
 
 });

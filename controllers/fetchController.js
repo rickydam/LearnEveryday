@@ -2,7 +2,7 @@ var size = 0;
 var count = 0;
 
 app.controller('fetchController', function ($scope, $http, resultsService) {
-  $http.get('http://localhost/storestuff/fetch.php')
+  $http.get('http://localhost/LearnEveryday/fetch.php')
     .then(function successCallback(response) {
       size = (response.data).length;
       while(count < size) {
