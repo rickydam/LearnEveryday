@@ -9,11 +9,13 @@
 4. Open phpMyAdmin
 5. Create a database named `the_database`
 6. Run query
-`CREATE TABLE test_table (
-  id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  theDate VARCHAR(1000) NOT NULL,
-  theContent VARCHAR(1000) NOT NULL
-)`
+```
+CREATE TABLE test_table (
+id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+theDate VARCHAR(1000) NOT NULL,
+theContent VARCHAR(1000) NOT NULL
+)
+```
 7. Navigate to the project directory `cd LearnEveryday`
 8. `npm install` to get the dependencies needed to run the project
 9. `node app.js` to run the project
