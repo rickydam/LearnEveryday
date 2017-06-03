@@ -10,7 +10,7 @@
 5. Create a database named `the_database`
 6. Run query
 ```
-CREATE TABLE test_table (
+CREATE TABLE the_table (
 id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 theDate VARCHAR(1000) NOT NULL,
 theContent VARCHAR(1000) NOT NULL
