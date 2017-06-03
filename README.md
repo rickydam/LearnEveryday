@@ -16,7 +16,7 @@ theDate VARCHAR(1000) NOT NULL,
 theContent VARCHAR(1000) NOT NULL
 )
 ```
-7. Navigate to the project directory `cd LearnEveryday`
+7. `cd LearnEveryday` to navigate to the project directory 
 8. `npm install` to get the dependencies needed to run the project
 9. `node app.js` to run the project
 10. Visit `localhost:3000`
